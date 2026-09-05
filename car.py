@@ -12,6 +12,8 @@ class car:
             return "Please enter a valid amount of fuel to refuel."
         if self.__fuel_level >= self.max_fuel:
             return "The fuel tank is already full."
+        if self.max_fuel - self.__fuel_level < liters:
+            return f"Cannot refuel {liters} liters. The fuel tank can only hold {self.max_fuel - self.__fuel_level} more liters."
         self.__fuel_level += liters
         return f"The car has been refueled with {liters} liters of fuel."
 
