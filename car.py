@@ -25,8 +25,11 @@ class car:
             return "Not enough fuel to drive the requested distance."
         self.__fuel_level -= fuel_needed
         return f"The car has driven {km} kilometers."
+    def get_fuel_level(self):
+        return self.__fuel_level
 
-car1 = car("Toyota", "Camry", 2020, "Blue", 50)
+my_car = car("Toyota", "Camry", 2020, "Blue", 50)
 
-print(car1.refuel(50))
-print(car1.drive(100))
+print(my_car.refuel(30))
+print(my_car.drive(100))
+print(my_car.get_fuel_level())
